@@ -1,0 +1,20 @@
+<ion-card class="adv-map">
+  <div style="position: relative">
+    <img [src]="wisata.image">
+  </div>
+  <ion-item>
+    <h2>Nama Wisata</h2>
+    <p>{{ wisata.nama_wisata }}</p>
+  </ion-item>
+  <ion-item>
+    <h2>Lokasi</h2>
+    <p>{{ wisata.lokasi }}</p>
+  </ion-item>
+  <ion-item actions>
+    <button ion-button color="primary" clear item-end icon-start>
+      <ion-icon name='navigate'></ion-icon>
+      Start
+    </button>
+  </ion-item>
+
+</ion-card>

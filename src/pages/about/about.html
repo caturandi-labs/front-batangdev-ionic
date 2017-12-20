@@ -1,11 +1,16 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="heading">
     <ion-title>
-      About
+      Informasi Umum
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="let menu of menus" icon-start>
+      <ion-icon [name]="menu.icon" [ngStyle]="{'color': menu.color}" item-start></ion-icon>
+      {{ menu.menu }}
+    </button>
+  </ion-list>
 </ion-content>

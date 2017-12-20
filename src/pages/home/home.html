@@ -1,17 +1,42 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="heading">
+    <ion-title>Batang City Guide</ion-title>
+    <ion-buttons color="light" end>
+      <button icon-only ion-button>
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-slides parallax="true" autoplay="2000" effect="slide" pager>
+        <ion-slide>
+          <img src="assets/imgs/1.jpg">
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/2.jpg">
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/3.jpg">
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/4.jpg">
+        </ion-slide>
+      </ion-slides>
+      
+    </ion-row>
+    <ion-row no-margin>
+      <ion-col *ngFor="let menu of menus" col-4 col-sm-4 col-md-3>
+        <ion-card>
+          <ion-card-content>
+            <img [src]="menu.img">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
 </ion-content>

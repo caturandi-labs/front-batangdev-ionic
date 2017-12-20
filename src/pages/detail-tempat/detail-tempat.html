@@ -1,0 +1,18 @@
+<!--
+  Generated template for the DetailTempatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>DetailTempat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <tempat-wisata *ngFor="let wisata of listWisata" [wisata]="wisata"></tempat-wisata>
+</ion-content>
