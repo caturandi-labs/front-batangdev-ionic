@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="heading">
+    <ion-title>Kontak Penting</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item *ngFor="let kontak of listKontak" (click)="lakukanPanggilan(kontak.no_telepon)">
+	    	<ion-icon name="call" item-start></ion-icon>
+	      	<p><b>{{kontak.keterangan}}</b></p>
+	      	<small>{{kontak.no_telepon}}</small>
+	  	</ion-item>
+	</ion-list>
+</ion-content>

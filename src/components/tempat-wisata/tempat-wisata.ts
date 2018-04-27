@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Wisata } from '../../models/wisata.interface';
 /**
  * Generated class for the TempatWisataComponent component.
  *
@@ -11,7 +10,4 @@ import { Wisata } from '../../models/wisata.interface';
   templateUrl: 'tempat-wisata.html'
 })
 export class TempatWisataComponent {
-
-  @Input() wisata: Wisata;
-
 }

@@ -2,7 +2,7 @@
   <ion-navbar color="heading">
     <ion-title>Batang City Guide</ion-title>
     <ion-buttons color="light" end>
-      <button icon-only ion-button>
+      <button (click)="shareAplikasi()" icon-only ion-button>
         <ion-icon name="share"></ion-icon>
       </button>
     </ion-buttons>
@@ -31,7 +31,7 @@
     <ion-row no-margin>
       <ion-col *ngFor="let menu of menus" col-4 col-sm-4 col-md-3>
         <ion-card>
-          <ion-card-content>
+          <ion-card-content (click)="getTempatDetail(menu.id,menu.text)">
             <img [src]="menu.img">
           </ion-card-content>
         </ion-card>

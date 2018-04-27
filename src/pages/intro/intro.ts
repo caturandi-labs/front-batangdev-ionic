@@ -18,7 +18,7 @@ export class IntroPage {
     {
       title: "Batang Guide",
       description: "Sedang Berada Di Batang ? Cari dan Temukan Pengalaman baru dengan mengunjungi tempat wisata dan tempat menarik lainnya",
-      image: "assets/imgs/batang_logo.png",
+      image: "assets/imgs/maps.png",
     }
   ];
 

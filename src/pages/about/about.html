@@ -6,11 +6,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <button ion-item *ngFor="let menu of menus" icon-start>
-      <ion-icon [name]="menu.icon" [ngStyle]="{'color': menu.color}" item-start></ion-icon>
-      {{ menu.menu }}
-    </button>
-  </ion-list>
+<ion-content>
+  <ion-row no-margin *ngFor="let url of alamatUrl">
+    <ion-card (click)="openLink(url.url_pemkab)">
+      <img src="assets/imgs/1.jpg"/>
+      <div class="card-title">Pemerintahan</div>
+      <div class="card-subtitle">Web Pemerintah Kab. Batang</div>
+    </ion-card>
+    <ion-card (click)="openLink(url.url_infobatang)">
+      <img src="assets/imgs/2.jpg"/>
+      <div class="card-title">Infobatang</div>
+      <div class="card-subtitle">Informasi Seputar Kabupaten Batang</div>
+    </ion-card>
+    <ion-card (click)="openLink(url.url_persibat)">
+      <img src="assets/imgs/persibat.jpg"/>
+      <div class="card-title">Persibat Batang</div>
+      <div class="card-subtitle">Informasi Seputar Persibat Batang</div>
+    </ion-card>
+    <ion-card (click)="navigateToNomorPenting()">
+      <img src="assets/imgs/rsud.jpg"/>
+      <div class="card-title">Nomor Penting</div>
+      <div class="card-subtitle">Daftar Nomor Penting Di Area Kab.Batang</div>
+    </ion-card>
+  </ion-row>
+  
 </ion-content>
